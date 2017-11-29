@@ -26,9 +26,9 @@ Links:
  	 - git clone --recursive https://github.com/espressif/esp-idf.git
           </pre>   
 	- cd to esp-idf directory then type following command :
-		<pre>
+	 <pre>
 		git submodule update --init
-		</pre>
+	</pre>
 
 3.  download MicroPython for ESP32 from https://github.com/micropython/micropython-esp32
 	- cd to eps32 under the micropython-esp32
@@ -42,6 +42,7 @@ Links:
 	FLASH_FREQ=40m
 	CROSS_COMPILE=xtensa-esp32-elf-
         </pre>
+	
 	include Makefile
 
 	- cd to root of repository of MicroPython then do as followings :
@@ -52,7 +53,7 @@ Links:
 	- to pre-compile
 	<pre>
 		$ make -C mpy-cross
-        <pre>
+        </pre>
 	- Then cd to esp32 directory and run :
 	<pre>
 		$ cd esp32
@@ -61,14 +62,17 @@ Links:
 		this produces binary firmware image file in buid subdirectory
 
 	- To erase old firmware use:
+	<pre>
 		$ make erase
-		
+	</pre>	
 	- To flash firmware to ESP32 use :
+	<pre>
 		$ make deploy 
-	
+	</pre>
 		this uses esptool.py locates in ESP-IDF 
 		
 
 <h2>How to upload pre-compiled firmware from micropython </h2>
-
+<pre>
 esptool.py --chip esp32 --port /dev/ttyUSB1 write_flash -z 0x1000 firmware.bin
+</pre>
