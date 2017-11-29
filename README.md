@@ -6,6 +6,7 @@ Links:
 3. https://github.com/micropython/micropython
 4. https://github.com/micropython/micropython-lib
 5. http://micropython.org/download
+6. https://github.com/MrSurly/micropython-esp32 (bluetooth implementation)
 
 <h2>Howto compile  MicroPython Firmware for ESP32</h2>
 
